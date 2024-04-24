@@ -1,0 +1,124 @@
+:root{
+    --cor_primaria: #222831;
+    --cor_secundaria: #31363F;
+    --title: #EEEEEE;
+}
+    
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:var(--cor_primaria) ;
+    background-image: url('/imagens/Background_codigos.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    font-size: 16px; /* Tamanho base de fonte */
+}
+
+.cabecalho{
+    padding: 2% 0% 3% 15%;
+    background-color: var(--cor_primaria);
+
+}
+
+.cabecalho__menu{
+    display: flex;
+    gap: 80px;
+   
+}
+
+.cabecalho__menu__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cabecalho__menu__item img{
+    width: 50%;
+    max-width: 100%;
+}
+
+.topico{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    /*ATENÇÃO, É PARA O NOME FICAR CENTRALIZADO*/
+    width: 50%;
+    font-family: "Teko", sans-serif;;
+    font-size: medium;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: var(--title);
+    transition: opacity 0.3s ease-out;
+    margin-right: 50%;
+}
+
+#menu_sobre{
+    opacity: 1;
+}
+
+.cabecalho__menu_container:hover .topico{
+    opacity: 1;
+}
+
+
+.cabecalho__menu_container:not(#menu_sobre):hover #menu_sobre {
+    opacity: 0; /* Reduz a opacidade de #menu_sobre quando o mouse passa sobre .cabecalho__menu_container */
+}
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.625rem;
+    background-color: var(--cor_secundaria);
+    text-align: center;
+    font-weight: 400;
+}
+
+
+.redes_sociais {
+    display: block; /* Torna as imagens elementos de bloco */
+}
+
+
+.redes_sociais img {
+    width: 7%; /* Define um tamanho fixo para os ícones */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-right: 3.125rem;
+    max-width: 100%;
+}
+
+.perfil {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 5%;
+}
+
+.foto_perfil {
+    width: 12%; /* Define um tamanho fixo para a foto de perfil */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 75px;
+    max-width: 100%;
+}
+
+.nome {
+    font-family: "Teko", sans-serif;
+    font-size: xx-large;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: var(--title);
+    align-self: center; /* Alinha verticalmente o texto */
+}
+
+a{
+    text-decoration: none;
+}
