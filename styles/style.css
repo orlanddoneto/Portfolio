@@ -190,15 +190,18 @@ a{
     }
 
     .card{
-        width: 50%;
+        width: 25%;
         height: 30%;
         margin: 10px auto;
     }
 
     .icon_home_sobre, .icon_home_projetos,.icon_home_competencias{
         /*REQUER ATENÇÃO*/
-        width: 4rem;
-        height: 50%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .topico{
@@ -216,10 +219,16 @@ a{
     .card_container:hover .icon_home_projetos,
     .card_container:hover .icon_home_competencias{
         /*REQUER ATENÇÃO DEPOIS*/
-        width: 4rem;
-        height: 4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         position: static;
-        transform: scale(1);
+        /*
+        width: 6.25rem;
+        height: 6.25rem;
+        */
+        transform: scale(0.8);
+        max-width: 100%;
     }
 
     .card_container:hover .content_card{
