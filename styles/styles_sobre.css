@@ -59,18 +59,18 @@ body{
     margin-right: 50%;
 }
 
-#menu_sobre{
-    opacity: 1;
+
+#page_atual{
+    opacity: 0.25;
+    transition: opacity 0.3s ease-out; /* Adiciona uma transição suave */
+
 }
 
-.cabecalho__menu_container:hover .topico{
-    opacity: 1;
+
+.cabecalho__menu_container:hover .topico {
+    opacity: 1; /* Reduz a opacidade de #menu_sobre quando o mouse passa sobre .cabecalho__menu_container */
 }
 
-
-.cabecalho__menu_container:not(#menu_sobre):hover #menu_sobre {
-    opacity: 0; /* Reduz a opacidade de #menu_sobre quando o mouse passa sobre .cabecalho__menu_container */
-}
 
 
 footer {

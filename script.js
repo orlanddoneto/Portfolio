@@ -1,20 +1,17 @@
-// Função para alterar o texto com base no tamanho da tela
-function alterarTexto() {
-    var textoAlvo = document.getElementById('texto-alvo');
+// Seleciona o elemento .cabecalho__menu_container
+const cabecalhoMenuContainer = document.querySelectorAll('.cabecalho__menu_container');
 
-    if (window.innerWidth <= 768) {
-        textoAlvo.innerHTML = "Texto para tela pequena";
-    } else {
-        textoAlvo.innerHTML = "Texto para tela grande";
-    }
-}
+// Seleciona o elemento #menu_sobre
+const menuSobre = document.querySelector('#page_atual');
 
-// Verifica o tamanho da tela ao carregar a página
-window.onload = function() {
-    alterarTexto();
-};
+// Adiciona um ouvinte de evento para quando o mouse entra no elemento .cabecalho__menu_container
+cabecalhoMenuContainer.forEach(item=>{item.addEventListener('mouseenter', () => {
+  // Altera a opacidade de #menu_sobre para 0
+  menuSobre.style.opacity = '0';})
 
-// Verifica o tamanho da tela quando a janela é redimensionada
-window.onresize = function() {
-    alterarTexto();
-};
+  item.addEventListener('mouseleave', () => {
+    // Altera a opacidade de #menu_sobre para 0.25
+    menuSobre.style.opacity = '0.25';
+  });
+});
+
