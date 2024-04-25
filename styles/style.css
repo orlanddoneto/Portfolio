@@ -28,7 +28,7 @@ body{
 }
 
 main{
-    flex: 1;  
+    flex: 1;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -44,7 +44,6 @@ main{
     justify-content: center;
     flex-direction: column;
     align-items: stretch;
-    position: relative;
     margin: 3.125rem;
     background-color: var(--cor_secundaria);
     width: 75%;
@@ -53,7 +52,7 @@ main{
     box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
     /*REQUER ATENÇÃO DEPOIS*/
     max-width: 28.125rem;
-    max-height: 28.125rem;
+    max-height: 55%;
     gap: 20%;
 }
 
@@ -92,15 +91,12 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    position: absolute;
-    top: 0%; 
-    left: 18%;
-    transform: translate(-50%, -50%); /* centraliza a caixa de conteúdo */
+    transform: translateX(150%); /* centraliza a caixa de conteúdo */
+    width: 25%;
     /*
     width: 6.25rem;
     height: 6.25rem;
     */
-    transform: scale(0.4);
     max-width: 100%;
     
     

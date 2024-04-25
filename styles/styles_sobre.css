@@ -12,6 +12,7 @@
 }
 
 body{
+
     background-color:var(--cor_primaria) ;
     background-image: url('/imagens/Background_codigos.png');
     background-size: cover;
@@ -77,6 +78,7 @@ body{
 }
 
 /*CONTEUDOU*/
+
 .apresentacao {
     padding: 5% 4%;
     display: flex;
@@ -107,7 +109,7 @@ body{
 }
 
 .apresentacao__conteudo__titulo{
-    font-size: 3em;
+    font-size: 2.5em;
     font-family: var(--font-primaria);
 }
 
@@ -116,13 +118,15 @@ body{
 }
 
 .apresentacao__conteudo__texto{
-    font-size: 1.1em;
+    font-size: 2em;
     font-family: var(--font-secundaria);
 }
 
 
 
 footer {
+    margin-top: auto;
+    width: 100%; /* Garante que o footer ocupe toda a largura da tela */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -130,6 +134,7 @@ footer {
     background-color: var(--cor_secundaria);
     text-align: center;
     font-weight: 400;
+    
 }
 
 
@@ -170,4 +175,84 @@ footer {
 
 a{
     text-decoration: none;
+}
+
+@media screen and (max-width:1024px){
+
+    .cabecalho {
+        position: fixed;
+        width: 100%;
+        background-color: var(--cor_primaria);
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 3%;
+
+      }
+    
+      .cabecalho__menu {
+        display: flex;
+        align-items:center;
+        gap: 5%;
+        transform:translateX(6%) 
+      }
+    
+      .apresentacao {
+        display: grid;
+        place-items: center;
+        flex-direction: column-reverse;
+        padding-top: 30%;
+        gap: 7%;
+
+      }
+
+      .apresentacao__conteudo:nth-child(1) {
+        order: 2; /* Define a ordem do primeiro elemento como 2 */
+      }
+    
+      .apresentacao__imagem,
+      .apresentacao__conteudo {
+        width: 80%;
+        max-width: 80%;
+
+      }
+    
+      .apresentacao__imagem {
+        margin-right: 0;
+      }
+    
+      .apresentacao__conteudo {
+        
+        max-height: 70vh; /* Defina a altura máxima desejada */
+        overflow-y: auto; /* Adicione rolagem vertical quando o conteúdo for maior que a altura máxima */
+        margin-bottom: 10%;
+    }
+
+    .apresentacao__conteudo__texto{
+        font-size: 1em;
+    }
+
+      footer {
+        padding: 0.5rem; /* Reduz o espaçamento interno */
+        gap: 4rem;
+    }
+
+    .redes_sociais img {
+        width: 15%; /* Reduz a altura das imagens das redes sociais */
+        height: 15%;
+        margin-right: 0.3rem; /* Reduz a margem entre os ícones das redes sociais */
+    }
+
+    .perfil {
+        gap: 0.3rem; /* Reduz o espaço entre a foto de perfil e o nome */
+    }
+
+    .foto_perfil {
+        width: 40%; /* Reduz o tamanho da foto de perfil */
+        height: 40%;
+    }
+
+    .nome{
+        font-size: 20px;
+    }
+    
 }
