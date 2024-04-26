@@ -12,7 +12,7 @@
 }
 
 body{
-
+    background-image: url('/imagens/Background_codigos.png');
     background-color:var(--cor_primaria) ;
     background-size: cover;
     background-repeat: no-repeat;
@@ -78,7 +78,7 @@ body{
 
 main{
    
-    padding: 5%;
+    padding: 7%;
     
 }
 
@@ -114,11 +114,9 @@ main{
     box-sizing: border-box;
     color: #fff;
     text-shadow: 0 5px 10px #0004;
+    font-family: "Teko", sans-serif;
 }
-.carousel .list .item .author{
-    font-weight: bold;
-    letter-spacing: 10px;
-}
+
 .carousel .list .item .title,
 .carousel .list .item .topic{
     font-size: 5em;
@@ -126,27 +124,34 @@ main{
     line-height: 1.3em;
 }
 .carousel .list .item .topic{
-    color: #f1683a;
+    color: var(--cor_terciaria);
+}
+.carousel .list .item .des{
+    font-family: "Teko", sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.06em;
+
+
+
 }
 .carousel .list .item .buttons{
     display: grid;
     grid-template-columns: repeat(2, 130px);
-    grid-template-rows: 40px;
+    grid-template-rows: 100%;
     gap: 5px;
-    margin-top: 20px;
+    margin-top: 3%;
 }
-.carousel .list .item .buttons button{
-    border: none;
-    background-color: #eee;
-    letter-spacing: 3px;
-    font-family: Poppins;
-    font-weight: 500;
-}
-.carousel .list .item .buttons button:nth-child(2){
+.carousel .list .item .buttons a{
     background-color: transparent;
     border: 1px solid #fff;
+    text-align: center;
     color: #eee;
+    letter-spacing: 3px;
+    font-family: "Teko", sans-serif;
+    font-weight: 500;
+    font-size: 1.6rem;
 }
+
 /* thumbail */
 .thumbnail{
     position: absolute;
@@ -201,7 +206,7 @@ main{
     background-color: #eee4;
     border: none;
     color: #fff;
-    font-family: monospace;
+    font-family: "Teko", sans-serif;
     font-weight: bold;
     transition: .5s;
 }
@@ -297,7 +302,7 @@ main{
     z-index: 1000;
     width: 0%;
     height: 3px;
-    background-color: #f1683a;
+    background-color: var(--cor_terciaria);
     left: 0;
     top: 0;
 }
@@ -359,15 +364,6 @@ main{
         opacity: 0;
     }
 }
-@media screen and (max-width: 678px) {
-    .carousel .list .item .content{
-        padding-right: 0;
-    }
-    .carousel .list .item .content .title{
-        font-size: 30px;
-    }
-}
-
 
 footer {
     margin-top: auto;
@@ -421,3 +417,65 @@ footer {
 a{
     text-decoration: none;
 }
+
+@media screen and (max-width: 1024px) {
+    .cabecalho {
+        position: fixed;
+        width: 100%;
+        background-color: var(--cor_primaria);
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 3%;
+
+      }
+    
+    .cabecalho__menu {
+        display: flex;
+        align-items:center;
+        gap: 5%;
+        transform:translateX(6%) 
+    }
+
+    .carousel{
+        margin-top: 20%;
+    }
+
+    .carousel .list .item .content{
+        padding-right: 0;
+    }
+    .carousel .list .item .content .title{
+        font-size: 2rem;
+    }
+    .carousel .list .item .des{
+        font-size: 1rem;
+    }
+    .carousel .list .item .buttons a{
+        font-size: 1rem;
+    }
+
+    footer {
+        padding: 0.5rem; /* Reduz o espaçamento interno */
+        gap: 4rem;
+    }
+
+    .redes_sociais img {
+        width: 15%; /* Reduz a altura das imagens das redes sociais */
+        height: 15%;
+        margin-right: 0.3rem; /* Reduz a margem entre os ícones das redes sociais */
+    }
+
+    .perfil {
+        gap: 0.3rem; /* Reduz o espaço entre a foto de perfil e o nome */
+    }
+
+    .foto_perfil {
+        width: 40%; /* Reduz o tamanho da foto de perfil */
+        height: 40%;
+    }
+
+    .nome{
+        font-size: 20px;
+    }
+}
+
+

@@ -118,7 +118,7 @@ body{
 }
 
 .apresentacao__conteudo__texto{
-    font-size: 2em;
+    font-size: 1.5em;
     font-family: var(--font-secundaria);
 }
 
@@ -180,7 +180,6 @@ a{
 @media screen and (max-width:1024px){
 
     .cabecalho {
-        position: fixed;
         width: 100%;
         background-color: var(--cor_primaria);
         padding-left: 5%;
@@ -200,7 +199,7 @@ a{
         display: grid;
         place-items: center;
         flex-direction: column-reverse;
-        padding-top: 30%;
+        padding-top: 10%;
         gap: 7%;
 
       }

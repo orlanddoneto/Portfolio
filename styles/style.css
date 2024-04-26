@@ -51,9 +51,9 @@ main{
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
     /*REQUER ATENÇÃO DEPOIS*/
-    max-width: 28.125rem;
-    max-height: 55%;
-    gap: 20%;
+    max-width: 18.125rem;
+    max-height: 65%;
+    gap: 10%;
 }
 
 .icon_home_sobre, .icon_home_projetos,.icon_home_competencias{
@@ -61,11 +61,11 @@ main{
     background-position: center;
     background-repeat: no-repeat;
     /*REQUER ATENÇÃO DEPOIS*/
-    width: 15.75rem;
-    transform: scale(0.8);
+    width: 10.75rem;
+    transform: translateX(10%);
     /*height: 18.75rem; /* Garantir que a imagem se ajuste ao contêiner */ /*
     border-radius: 10px; /* Adicionar borda arredondada para a imagem */
-    max-width: 100%;
+    max-width: 80%;
 }
 
 .content_card{
@@ -91,7 +91,7 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    transform: translateX(150%); /* centraliza a caixa de conteúdo */
+    transform: translate(150%,-50%); /* centraliza a caixa de conteúdo */
     width: 25%;
     /*
     width: 6.25rem;
@@ -189,6 +189,7 @@ a{
         width: 25%;
         height: 30%;
         margin: 10px auto;
+        
     }
 
     .icon_home_sobre, .icon_home_projetos,.icon_home_competencias{
