@@ -489,7 +489,8 @@ a{
         left: 35%;
     }
     .thumbnail .item{
-        width: 13em;
+        width: 10em;
+        height: 7em;
     }
 
     .arrows{
