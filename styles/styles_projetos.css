@@ -438,7 +438,9 @@ a{
         padding-right: 5%;
         padding-top: 3%;
 
-      }
+    }
+
+
     
     .cabecalho__menu {
         display: flex;
@@ -448,7 +450,9 @@ a{
     }
 
     .carousel{
-        height: 90vh;
+        height: 70vh;
+        margin-top: 15%;
+        margin-bottom: 30%;
         box-shadow: none;
     }
 
@@ -490,6 +494,10 @@ a{
 
     .arrows{
         right: 70%;
+    }
+
+    .carousel .time{
+        display: none;
     }
 
     footer {
