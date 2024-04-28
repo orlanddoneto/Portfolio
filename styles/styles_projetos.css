@@ -110,7 +110,7 @@ main{
     top: 25%;
     width: 40em;
     max-width: 80%;
-    left: 30%;
+    left: 25%;
     transform: translateX(-50%);
     padding-left: 3%;
     padding-bottom: 3%;
@@ -175,6 +175,8 @@ main{
     height: 11em;
     flex-shrink: 0;
     position: relative;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+
 }
 .thumbnail .item img{
     width: 100%;
@@ -183,17 +185,19 @@ main{
     border-radius: 20px;
 }
 .thumbnail .item .content{
-    color: #fff;
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    right: 10px;
+    color: var(--title);
+    background-color: var(--cor_primaria);
+    text-align: center;
+    border-radius: 10%;
+    transform: scale(0.9);
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+
 }
 .thumbnail .item .content .title{
-    font-weight: 500;
+    font-weight: bold;
 }
 .thumbnail .item .content .description{
-    font-weight: 300;
+    font-weight: bold;
 }
 /* arrows */
 .arrows{
@@ -239,7 +243,7 @@ main{
     transform: translateY(50px);
     filter: blur(20px);
     opacity: 0;
-    animation: showContent .3s linear 1 forwards;
+    animation: showContent .4s linear 1 forwards;
 }
 @keyframes showContent{
     to{
@@ -450,7 +454,7 @@ a{
 
     .carousel .list .item .content{
         padding-top: 5%;
-        padding-left: 15%;
+        padding-left: 20%;
     }
     .carousel .list .item img{
         object-fit: cover;
@@ -462,7 +466,7 @@ a{
         font-size: 1rem;
     }
     .carousel .list .item .des{
-        font-size: 0.5em;
+        font-size: 0.8em;
     }
     .carousel .list .item .buttons a{
         font-size: 0.5rem;
