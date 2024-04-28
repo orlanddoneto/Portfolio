@@ -55,7 +55,7 @@ body{
     opacity: 0;
     /*ATENÇÃO, É PARA O NOME FICAR CENTRALIZADO*/
     width: 50%;
-    font-family: "Teko", sans-serif;;
+    font-family: "Teko", sans-serif;
     font-size: medium;
     font-weight: 700;
     letter-spacing: 0.06em;
@@ -76,14 +76,84 @@ body{
 }
 
 main{
-    width: 80%;
-    height: 90%;
-    perspective: 800px;
-    padding: 7%;
-    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 4em;
+    column-gap: 9.75em;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    min-height: 90vh;
+}
+/*TRANSFORMAR EM em*/
+.card_container{
+    background-color: transparent;
+    width: 13em;
+    height: 15em;
+    perspective: 1000px; 
+
 }
 
+.card_content{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
 
+.card__imagem{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.card__imagem img{
+    width: 8em;
+    height: 8em;
+}
+
+.card_container:hover .card_content{
+    transform: rotateY(180deg);
+
+}
+
+.front, .back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+.front{
+    background-color: var(--cor_secundaria);
+    border-radius: 5%;
+
+}
+
+.back{
+    background-color: var(--cor_terciaria);
+    color: black;
+    transform: rotateY(180deg);
+    border-radius: 5%;
+    font-family: "Teko", sans-serif;
+    padding-top: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 1.15em;
+    letter-spacing: 0.03em;
+
+}
 
 
 footer {
@@ -135,4 +205,67 @@ footer {
 
 a{
     text-decoration: none;
+}
+
+@media screen and (max-width:1024px){
+
+    .cabecalho {
+        width: 100%;
+        background-color: var(--cor_primaria);
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 3%;
+
+    }
+    
+    .cabecalho__menu {
+        display: flex;
+        align-items:center;
+        gap: 5%;
+        transform:translateX(6%) 
+    }
+
+    .card_container{
+        width: 5.2em;
+        height: 7em;
+    }
+
+    .card__imagem img{
+        width: 3.5em;
+        height: 3.5em;
+    }
+
+    .back{
+        font-size: 0.5em;
+    }
+
+
+    footer {
+        padding: 0.5rem; /* Reduz o espaçamento interno */
+        gap: 4rem;
+    }
+
+    .redes_sociais img {
+        width: 15%; /* Reduz a altura das imagens das redes sociais */
+        height: 15%;
+        margin-right: 0.3rem; /* Reduz a margem entre os ícones das redes sociais */
+    }
+
+    .perfil {
+        gap: 0.3rem; /* Reduz o espaço entre a foto de perfil e o nome */
+    }
+
+    .foto_perfil {
+        width: 40%; /* Reduz o tamanho da foto de perfil */
+        height: 40%;
+    }
+
+    .nome{
+        font-size: 20px;
+    }
+
+
+
+
+
 }

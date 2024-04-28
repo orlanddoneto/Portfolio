@@ -107,17 +107,22 @@ main{
 }
 .carousel .list .item .content{
     position: absolute;
-    top: 20%;
-    width: 1140px;
+    top: 25%;
+    width: 40em;
     max-width: 80%;
-    left: 50%;
+    left: 30%;
     transform: translateX(-50%);
-    padding-right: 30%;
+    padding-left: 3%;
+    padding-bottom: 3%;
     box-sizing: border-box;
     color: #fff;
     text-shadow: 0 5px 10px #0004;
     font-family: "Teko", sans-serif;
+    background-color: var(--cor_secundaria);
+    border-radius: 5%;
 }
+
+
 
 .carousel .list .item .title,
 .carousel .list .item .topic{
@@ -166,15 +171,15 @@ main{
     gap: 20px;
 }
 .thumbnail .item{
-    width: 150px;
-    height: 220px;
+    width: 15em;
+    height: 11em;
     flex-shrink: 0;
     position: relative;
 }
 .thumbnail .item img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
     border-radius: 20px;
 }
 .thumbnail .item .content{
@@ -206,7 +211,7 @@ main{
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #eee4;
+    background-color: var(--cor_secundaria);
     border: none;
     color: #fff;
     font-family: "Teko", sans-serif;
@@ -257,8 +262,8 @@ main{
 }
 /* create animation when next click */
 .carousel.next .list .item:nth-child(1) img{
-    width: 150px;
-    height: 220px;
+    width: 15em;
+    height: 11em;
     position: absolute;
     bottom: 50px;
     left: 50%;
@@ -334,8 +339,8 @@ main{
 }
 @keyframes outFrame{
     to{
-        width: 150px;
-        height: 220px;
+        width: 15em;
+        height: 11em;
         bottom: 50px;
         left: 50%;
         border-radius: 20px;
@@ -444,16 +449,24 @@ a{
     }
 
     .carousel .list .item .content{
-        padding-right: 0;
+        padding-top: 5%;
+        padding-left: 15%;
+    }
+    .carousel .list .item img{
+        object-fit: cover;
     }
     .carousel .list .item .content .title{
-        font-size: 2rem;
+        font-size: 1rem;
+    }
+    .carousel .list .item .content .topic{
+        font-size: 1rem;
     }
     .carousel .list .item .des{
-        font-size: 1rem;
+        font-size: 0.5em;
     }
     .carousel .list .item .buttons a{
-        font-size: 1rem;
+        font-size: 0.5rem;
+
     }
 
     footer {
