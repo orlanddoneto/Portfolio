@@ -205,11 +205,9 @@ a{
     }
 
     .card_container{
-        width: 6em;
-        height: 9em;
+        width: 10em;
+        height: 11em;
     }
-
-   
 
     .icon_home_sobre, .icon_home_projetos,.icon_home_competencias{
         width: 4em;
