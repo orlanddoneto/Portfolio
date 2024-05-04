@@ -157,8 +157,6 @@ main{
 
 
 footer {
-    margin-top: auto;
-    width: 100%; /* Garante que o footer ocupe toda a largura da tela */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -166,19 +164,24 @@ footer {
     background-color: var(--cor_secundaria);
     text-align: center;
     font-weight: 400;
-    
 }
+
 
 .redes_sociais {
-    display: block; /* Torna as imagens elementos de bloco */
+    display: inline-block;
+   
 }
 
-.redes_sociais img {
-    width: 7%; /* Define um tamanho fixo para os ícones */
-    height: auto; /* Mantém a proporção da imagem */
-    margin-right: 3.125rem;
+.redes_sociais .icon_footer img{
+    margin-right: 0.825rem;
+    width: 5%;
+    height: auto;
     max-width: 100%;
+    cursor: pointer;
+
 }
+
+
 
 .perfil {
     display: flex;
@@ -207,6 +210,87 @@ a{
     text-decoration: none;
 }
 
+/*POPUP EMAIL*/
+.popup {
+    display: none;
+    position: fixed;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f9f9f9;
+    padding: 7%;
+    border-radius: 3%;
+    z-index: 9999;
+    background-color: var(--cor_terciaria);
+}
+
+.popup h2{
+    font-family: "Teko", sans-serif;
+    margin-bottom: 10%;
+}
+.popup form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.popup form input,
+.popup form textarea {
+    margin-bottom: 5%; /* Adiciona um espaço de 10 pixels entre cada elemento */
+    width: 20em;
+    padding: 2%;
+}
+
+.popup form input[type="submit"] {
+    margin-top: 5%; /* Adiciona um espaço de 10 pixels acima do botão de envio */
+    width: 5em;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 15%;
+}
+
+.popup form input[type="submit"]:hover{
+    background-color: var(--cor_primaria);
+    color: white;
+}
+
+.close {
+    position: absolute;
+    top:1%;
+    right: 2%;
+    padding: 1%;
+    cursor: pointer;
+    color: black;
+
+    border-radius: 20%;
+    
+    
+}
+
+.close:hover{
+    color: white;
+    
+}
+
+.email-icon {
+    cursor: pointer;
+    font-size: 24px;
+}
+
+textarea {
+    height: 10em;
+    resize: none;
+}
+
+a{
+    text-decoration: none;
+}
+
 @media screen and (max-width:1024px){
 
     .cabecalho {
@@ -225,6 +309,15 @@ a{
         transform:translateX(6%) 
     }
 
+    .topico{
+        font-size: 0.7rem;
+    }
+
+    main{
+        row-gap: 4em;
+        column-gap: 6.75em;
+    }
+
     .card_container{
         width: 5.2em;
         height: 7em;
@@ -235,8 +328,12 @@ a{
         height: 3.5em;
     }
 
+    h3{
+        font-size: 0.7rem;
+    }
+
     .back{
-        font-size: 0.5em;
+        font-size: 0.625rem;
     }
 
 
@@ -245,7 +342,7 @@ a{
         gap: 4rem;
     }
 
-    .redes_sociais img {
+    .redes_sociais .icon_footer img {
         width: 15%; /* Reduz a altura das imagens das redes sociais */
         height: 15%;
         margin-right: 0.3rem; /* Reduz a margem entre os ícones das redes sociais */
@@ -261,7 +358,7 @@ a{
     }
 
     .nome{
-        font-size: 20px;
+        font-size: 0.8rem;
     }
 
 

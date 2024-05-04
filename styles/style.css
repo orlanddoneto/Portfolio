@@ -1,6 +1,7 @@
 :root{
         --cor_primaria: #222831;
         --cor_secundaria: #31363F;
+        --cor_terciaria: #76ABAE;
         --title: #EEEEEE;
     }
     
@@ -139,7 +140,7 @@ main{
     display: none;
     width: 100%;
     margin-top: 3.125rem;
-    font-family: "Teko", sans-serif;;
+    font-family: "Teko", sans-serif;
     font-size: xx-large;
     font-weight: 700;
     letter-spacing: 0.06em;
@@ -158,16 +159,20 @@ footer {
 
 
 .redes_sociais {
-    display: block; /* Torna as imagens elementos de bloco */
+    display: inline-block;
+   
 }
 
-
-.redes_sociais img {
-    width: 7%; /* Define um tamanho fixo para os ícones */
-    height: auto; /* Mantém a proporção da imagem */
-    margin-right: 3.125rem;
+.redes_sociais .icon_footer img{
+    margin-right: 0.825rem;
+    width: 5%;
+    height: auto;
     max-width: 100%;
+    cursor: pointer;
+
 }
+
+
 
 .perfil {
     display: flex;
@@ -196,17 +201,95 @@ a{
     text-decoration: none;
 }
 
+/*POPUP EMAIL*/
+.popup {
+    display: none;
+    position: fixed;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f9f9f9;
+    padding: 7%;
+    border-radius: 3%;
+    z-index: 9999;
+    background-color: var(--cor_terciaria);
+}
+
+.popup h2{
+    font-family: "Teko", sans-serif;
+    margin-bottom: 10%;
+}
+.popup form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.popup form input,
+.popup form textarea {
+    margin-bottom: 5%; /* Adiciona um espaço de 10 pixels entre cada elemento */
+    width: 20em;
+    padding: 2%;
+}
+
+.popup form input[type="submit"] {
+    margin-top: 5%; /* Adiciona um espaço de 10 pixels acima do botão de envio */
+    width: 5em;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 15%;
+}
+
+.popup form input[type="submit"]:hover{
+    background-color: var(--cor_primaria);
+    color: white;
+}
+
+.close {
+    position: absolute;
+    top:1%;
+    right: 2%;
+    padding: 1%;
+    cursor: pointer;
+    color: black;
+
+    border-radius: 20%;
+    
+    
+}
+
+.close:hover{
+    color: white;
+    
+}
+
+.email-icon {
+    cursor: pointer;
+    font-size: 24px;
+}
+
+textarea {
+    height: 10em;
+    resize: none;
+}
+
 
 @media screen and (max-width:1024px) {
     main{
         flex-wrap: wrap;
         align-items: center;
-        padding-bottom: 17%;
+        padding-bottom: 20%;
     }
 
     .card_container{
         width: 10em;
         height: 11em;
+        margin-bottom: 15%;
     }
 
     .icon_home_sobre, .icon_home_projetos,.icon_home_competencias{
@@ -252,7 +335,7 @@ a{
         gap: 4rem;
     }
 
-    .redes_sociais img {
+    .redes_sociais .icon_footer img {
         width: 15%; /* Reduz a altura das imagens das redes sociais */
         height: 15%;
         margin-right: 0.3rem; /* Reduz a margem entre os ícones das redes sociais */
@@ -268,7 +351,7 @@ a{
     }
 
     .nome{
-        font-size: 20px;
+        font-size: 0.8rem;
     }
     
     
